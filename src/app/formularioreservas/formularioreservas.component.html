@@ -5,21 +5,21 @@
         <h5>RESERVA ONLINE</h5>
         <p>Mejor precio garantizado</p>
         <hr>
-        <form>
+        <form (ngSubmit)="crearReserva(formulario)" #formulario="ngForm">
             <div class="row g-3">
                 <div class="col">
                     <label for="formGroupExampleInput" class="form-label">Entrada</label>
-                    <input type="date" class="form-control" placeholder="First name" aria-label="First name">
+                    <input name="entrada" ngModel type="date" class="form-control" placeholder="First name" aria-label="First name">
                 </div>
                 <div class="col">
                     <label for="formGroupExampleInput" class="form-label">Salida</label>
-                    <input type="date" class="form-control" placeholder="Last name" aria-label="Last name">
+                    <input name="salida" ngModel type="date" class="form-control" placeholder="Last name" aria-label="Last name">
                 </div>
             </div>
             <div class="row g-3 mt-2">
                 <div class="col">
                     <label for="formGroupExampleInput" class="form-label">Adulto(s)</label>
-                    <select class="form-select" aria-label="Default select example">
+                    <select name="adultos" ngModel class="form-select" aria-label="Default select example">
                         <option selected>Adulto(s)</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -29,7 +29,7 @@
                 </div>
                 <div class="col">
                     <label for="formGroupExampleInput" class="form-label">Niños(s)</label>
-                    <select class="form-select" aria-label="Default select example">
+                    <select name="ninos" ngModel class="form-select" aria-label="Default select example">
                         <option selected>Adulto(s)</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
